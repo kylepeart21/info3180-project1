@@ -1,6 +1,55 @@
 {% extends "base.html" %}
 
 {% block main %}
-<h1 class="display-5 fw-bold">About</h1>
-<p>This webpage is about {{ name }}.</p>
+
+<div class="about-wrapper">
+
+    <div class="about-card">
+
+        <h1>About My App</h1>
+
+        <p class="about-intro">
+            Redefining how people discover and experience real estate.
+        </p>
+
+        <p>
+            <strong>My App</strong> is a modern real estate platform built to connect
+            buyers, sellers, and dreamers with properties that inspire.
+            From beachfront villas to urban living spaces, we bring the best
+            listings together in one seamless experience.
+        </p>
+
+        <p>
+            Designed with performance, simplicity, and elegance in mind,
+            our platform combines powerful functionality with a refined interface —
+            allowing you to explore, evaluate, and take action with confidence.
+        </p>
+
+        <div class="about-features">
+
+            <div class="feature">
+                <h4>Premium Listings</h4>
+                <p>Curated properties across prime locations.</p>
+            </div>
+
+            <div class="feature">
+                <h4>Seamless Experience</h4>
+                <p>Fast, intuitive, and built for modern users.</p>
+            </div>
+
+            <div class="feature">
+                <h4>Designed for You</h4>
+                <p>Focused on simplicity, clarity, and elegance.</p>
+            </div>
+
+        </div>
+
+        <p class="about-highlight">
+            Find more than a property — discover your future.
+        </p>
+
+    </div>
+
+</div>
+
 {% endblock %}

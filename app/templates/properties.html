@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<h2 class="properties-title">Properties</h2>
+
+<div class="row properties-grid">
+
+{% for property in properties %}
+    <div class="col-md-6 col-lg-4 mb-4 property-card">
+
+        <div class="card">
+
+            <div class="image-wrapper">
+                <img src="{{ url_for('static', filename='uploads/' + property.photo) }}">
+
+                <div class="overlay"></div>
+
+                <div class="price-badge">
+                    ${{ property.price }}
+                </div>
+
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="card-body">
+                <h5>{{ property.title }}</h5>
+                <p class="location">{{ property.location }}</p>
+                <p class="price">${{ property.price }}</p>
+
+                <a href="{{ url_for('property_detail', id=property.id) }}" 
+                   class="btn btn-success w-100">
+                    View Property
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+{% endfor %}
+
+</div>
+
+{% endblock %}

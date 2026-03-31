@@ -1,14 +1,24 @@
 {% extends "base.html" %}
 
-{% block css %}{% endblock %}
-
 {% block main %}
-<div class="p-5 mb-4 bg-light rounded-3 border">
-  <div class="container-fluid py-5">
-    <h1 class="display-5 fw-bold">Hello, world!</h1>
-    <p>This is a simple starter template for a Flask Application</p>
-  </div>
-</div>
-{% endblock %}
 
-{% block js %}{% endblock %}
+<div class="hero-wrapper">
+
+    <div class="hero-content">
+        <h1>Find Your Dream Home</h1>
+        <p>Luxury properties. Prime locations. Designed for your lifestyle.</p>
+
+        <div class="hero-actions">
+            <a href="{{ url_for('properties') }}" class="btn btn-primary btn-lg">
+                Browse Properties
+            </a>
+
+            <a href="{{ url_for('create_property') }}" class="btn btn-outline-light btn-lg">
+                List Your Property
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
